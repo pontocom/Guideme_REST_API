@@ -6,15 +6,15 @@ Android application named GuideMe App.
 ## API signatures
 The API contains the following entry points:
 
-- POST /poi
+- ```POST /poi```
   - Adds a new POI (Point Of Interest) to the system, through a JSON object
-- GET /poi
+- ```GET /poi```
   - Obtains all the POI on the system
-- GET /poi/:id
+- ```GET /poi/:id```
   - Obtains information about a particular POI represented by a specific ID
-- GET /poi/range/:latt/:logt/:distance 
+- ```GET /poi/range/:latt/:logt/:distance``` 
   - Obtains information about all the POIs that are in the range of a specific distance from a given coordinates pair
-- GET /poi/range/:latt/:logt/:distance/:type 
+- ```GET /poi/range/:latt/:logt/:distance/:type``` 
   - Obtains information about all the POIs of a given type that are in the range of a specific distance from a given coordinates pair
 
 ## POI JSON object
