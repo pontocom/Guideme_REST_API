@@ -1,4 +1,4 @@
-#GuideMe REST API
+# GuideMe REST API
 Project developed using Node.js to implement a basic 
 **REST API** for supporting the development of a distributed
 Android application named GuideMe App.
