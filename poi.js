@@ -38,7 +38,7 @@ exports.addPOI = function(req, res) {
 };
 
 exports.listAllPOI = function(req, res) {
-    var query = connection.query('SELECT * FROM poi', function (err, rows) {
+    var query = connection.query('SELECT id, name, address, latt, logt FROM poi', function (err, rows) {
         if(err) {
             res.send({status:"ERR", message: err.message + 'SQL = ' + query.sql});
             throw err;
@@ -64,6 +64,10 @@ exports.getPOIByDistance = function(req, res) {
     var distance = req.params.distance;
     var lat = req.params.latt;
     var lgt = req.params.logt;
+
+    console.log("Distance = " + distance);
+    console.log("Latitude = " + lat);
+    console.log("Longitude = " + lgt);
 
     var result = [];
     var query = connection.query('SELECT * FROM poi', function (err, rows) {
